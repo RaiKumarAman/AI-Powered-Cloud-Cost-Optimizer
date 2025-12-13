@@ -76,14 +76,14 @@ pip install -r requirements.txt
 
 1. **Copy the example .env file:**
 ```bash
-copy .env.example .env
+copy .env
 ```
 
 2. **Edit `.env` with your HuggingFace API key:**
 ```env
 # Get your API key from https://huggingface.co/settings/tokens
 HUGGINGFACE_API_KEY=hf_xxxxxxxxxxxxxxxxxxxxxx
-HUGGINGFACE_MODEL=meta-llama/Llama-2-7b-chat-hf
+HUGGINGFACE_MODEL=meta-llama/Meta-Llama-3-8B-Instruct
 
 # Optional: Set your budget threshold (in USD)
 BUDGET_THRESHOLD=5000
@@ -517,3 +517,4 @@ The AI-Powered Cloud Cost Optimizer provides intelligent, LLM-driven cloud cost 
 
 **Version:** 1.0.0  
 **Last Updated:** December 2024
+
