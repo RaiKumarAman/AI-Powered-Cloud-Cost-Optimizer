@@ -1,25 +1,10 @@
-"""
-JSON Validators for Cloud Cost Optimizer.
-
-This module provides validation functions for JSON responses from LLM,
-ensuring data integrity and format compliance.
-"""
 
 import json
 from typing import Any, Dict, List, Tuple
 
 
 def validate_json_structure(data: Any, required_keys: List[str]) -> Tuple[bool, str]:
-    """
-    Validate that data is valid JSON and contains required keys.
-    
-    Args:
-        data: Data to validate (dict or JSON string)
-        required_keys: List of keys that must be present
-        
-    Returns:
-        Tuple of (is_valid, error_message)
-    """
+   
     try:
         # If data is a string, parse it
         if isinstance(data, str):
@@ -45,15 +30,7 @@ def validate_json_structure(data: Any, required_keys: List[str]) -> Tuple[bool, 
 
 
 def validate_profile(data: Any) -> Tuple[bool, str]:
-    """
-    Validate project profile JSON structure.
-    
-    Args:
-        data: Profile data to validate
-        
-    Returns:
-        Tuple of (is_valid, error_message)
-    """
+   
     try:
         if isinstance(data, str):
             parsed_data = json.loads(data)
@@ -100,15 +77,7 @@ def validate_profile(data: Any) -> Tuple[bool, str]:
 
 
 def validate_billing(data: Any) -> Tuple[bool, str]:
-    """
-    Validate mock billing JSON structure (array format).
     
-    Args:
-        data: Billing data to validate (array of records)
-        
-    Returns:
-        Tuple of (is_valid, error_message)
-    """
     try:
         if isinstance(data, str):
             parsed_data = json.loads(data)
@@ -162,15 +131,7 @@ def validate_billing(data: Any) -> Tuple[bool, str]:
 
 
 def validate_recommendations(data: Any) -> Tuple[bool, str]:
-    """
-    Validate cost optimization report JSON structure.
-    
-    Args:
-        data: Report data to validate
-        
-    Returns:
-        Tuple of (is_valid, error_message)
-    """
+   
     try:
         if isinstance(data, str):
             parsed_data = json.loads(data)
@@ -239,3 +200,4 @@ def validate_recommendations(data: Any) -> Tuple[bool, str]:
         return False, f"Invalid JSON: {str(e)}"
     except Exception as e:
         return False, f"Validation error: {str(e)}"
+
