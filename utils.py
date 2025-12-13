@@ -1,8 +1,4 @@
-"""
-Utility functions for Cloud Cost Optimizer.
 
-This module provides helper functions for file I/O, formatting, and data processing.
-"""
 
 import json
 import os
@@ -11,15 +7,7 @@ from typing import Any, Dict
 
 
 def load_env_file(env_path: str = ".env") -> Dict[str, str]:
-    """
-    Load environment variables from .env file.
     
-    Args:
-        env_path: Path to .env file
-        
-    Returns:
-        Dictionary of environment variables
-    """
     env_vars = {}
     if os.path.exists(env_path):
         with open(env_path, 'r') as f:
@@ -33,16 +21,7 @@ def load_env_file(env_path: str = ".env") -> Dict[str, str]:
 
 
 def save_json(data: Dict[str, Any], filepath: str) -> bool:
-    """
-    Save data as JSON to file.
     
-    Args:
-        data: Data to save
-        filepath: Path to output file
-        
-    Returns:
-        True if successful, False otherwise
-    """
     try:
         # Ensure directory exists
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
@@ -56,15 +35,7 @@ def save_json(data: Dict[str, Any], filepath: str) -> bool:
 
 
 def load_json(filepath: str) -> Dict[str, Any]:
-    """
-    Load JSON from file.
     
-    Args:
-        filepath: Path to JSON file
-        
-    Returns:
-        Parsed JSON data or empty dict if file not found
-    """
     try:
         if os.path.exists(filepath):
             with open(filepath, 'r') as f:
@@ -75,16 +46,7 @@ def load_json(filepath: str) -> Dict[str, Any]:
 
 
 def save_text(content: str, filepath: str) -> bool:
-    """
-    Save text content to file.
     
-    Args:
-        content: Text content
-        filepath: Path to output file
-        
-    Returns:
-        True if successful, False otherwise
-    """
     try:
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
         with open(filepath, 'w') as f:
@@ -96,15 +58,7 @@ def save_text(content: str, filepath: str) -> bool:
 
 
 def load_text(filepath: str) -> str:
-    """
-    Load text from file.
     
-    Args:
-        filepath: Path to text file
-        
-    Returns:
-        File content or empty string if not found
-    """
     try:
         if os.path.exists(filepath):
             with open(filepath, 'r') as f:
@@ -115,56 +69,24 @@ def load_text(filepath: str) -> str:
 
 
 def format_currency(amount: float) -> str:
-    """
-    Format amount as USD currency string.
     
-    Args:
-        amount: Numeric amount
-        
-    Returns:
-        Formatted currency string
-    """
-    return f"${amount:,.2f}"
+    return f"inr{amount:,.2f}"
 
 
 def format_percentage(value: float) -> str:
-    """
-    Format value as percentage string.
     
-    Args:
-        value: Numeric value
-        
-    Returns:
-        Formatted percentage string
-    """
     return f"{value:.1f}%"
 
 
 def ensure_json_string(data: Any) -> str:
-    """
-    Ensure data is a JSON string.
-    
-    Args:
-        data: Data to convert
-        
-    Returns:
-        JSON string representation
-    """
+   
     if isinstance(data, str):
         return data
     return json.dumps(data)
 
 
 def parse_json_response(response_text: str) -> Dict[str, Any]:
-    """
-    Extract and parse JSON from LLM response text.
-    
-    Args:
-        response_text: Raw response text from LLM
-        
-    Returns:
-        Parsed JSON dictionary
-    """
+   
     # Try direct parsing first
     try:
         return json.loads(response_text)
@@ -193,3 +115,4 @@ def create_project_structure():
     ]
     for directory in directories:
         os.makedirs(directory, exist_ok=True)
+
