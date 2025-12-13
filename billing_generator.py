@@ -1,8 +1,4 @@
-"""
-Synthetic Billing Data Generator using LLM.
 
-This module generates realistic mock billing data using LLM based on project profile.
-"""
 
 import json
 from typing import Dict, Any, List
@@ -12,29 +8,14 @@ from validators import validate_billing
 
 
 class BillingGenerator:
-    """Generate synthetic billing data using LLM."""
+   
     
     def __init__(self, api_key: str = None, model: str = None):
-        """
-        Initialize billing generator.
-        
-        Args:
-            api_key: HuggingFace API key
-            model: Model name
-        """
+       
         self.client = HFInferenceClient(api_key=api_key, model=model)
     
     def generate(self, project_profile: Dict[str, Any], max_retries: int = 3) -> List[Dict[str, Any]]:
-        """
-        Generate mock billing data for project.
-        
-        Args:
-            project_profile: Project profile from extractor
-            max_retries: Number of retries if validation fails
-            
-        Returns:
-            List of billing records with 12-20 items
-        """
+       
         prompt = self._build_prompt(project_profile)
         
         for attempt in range(max_retries):
@@ -77,15 +58,7 @@ class BillingGenerator:
         raise Exception("Failed to generate billing data after max retries")
     
     def _build_prompt(self, project_profile: Dict[str, Any]) -> str:
-        """
-        Build LLM prompt for billing generation.
         
-        Args:
-            project_profile: Project profile
-            
-        Returns:
-            Formatted prompt string
-        """
         name = project_profile.get("name", "Unknown Project")
         budget = project_profile.get("budget_inr_per_month", 50000)
         description = project_profile.get("description", "")
@@ -136,15 +109,7 @@ Example format:
 """
     
     def _parse_response(self, response_text: str) -> List[Dict[str, Any]]:
-        """
-        Parse JSON array from response text.
         
-        Args:
-            response_text: Raw response from LLM
-            
-        Returns:
-            Parsed JSON array of billing records
-        """
         # Try direct parsing (for array format)
         try:
             parsed = json.loads(response_text)
@@ -183,3 +148,4 @@ Example format:
                 pass
         
         raise json.JSONDecodeError("Could not extract valid JSON", response_text, 0)
+
