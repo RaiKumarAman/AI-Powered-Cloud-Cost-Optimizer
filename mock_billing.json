@@ -1,0 +1,167 @@
+[
+  {
+    "month": "2025-12",
+    "service": "Compute",
+    "resource_id": "web-server-01",
+    "region": "ap-south-1",
+    "usage_type": "On-Demand",
+    "usage_quantity": 720,
+    "unit": "hours",
+    "cost_inr": 8640,
+    "desc": "Web application server t3.medium instance"
+  },
+  {
+    "month": "2025-12",
+    "service": "Database",
+    "resource_id": "db-primary",
+    "region": "ap-south-1",
+    "usage_type": "Reserved",
+    "usage_quantity": 1,
+    "unit": "instance",
+    "cost_inr": 12000,
+    "desc": "Primary PostgreSQL instance (db.r6g.16xlarge)"
+  },
+  {
+    "month": "2025-12",
+    "service": "Storage",
+    "resource_id": "data-store-01",
+    "region": "ap-south-1",
+    "usage_type": "On-Demand",
+    "usage_quantity": 500,
+    "unit": "GB",
+    "cost_inr": 1500,
+    "desc": "Data storage for food images and recipes"
+  },
+  {
+    "month": "2025-12",
+    "service": "Networking",
+    "resource_id": "load-balancer-01",
+    "region": "ap-south-1",
+    "usage_type": "On-Demand",
+    "usage_quantity": 1000,
+    "unit": "requests",
+    "cost_inr": 500,
+    "desc": "Load balancer for web servers"
+  },
+  {
+    "month": "2025-12",
+    "service": "CDN",
+    "resource_id": "cdn-01",
+    "region": "ap-south-1",
+    "usage_type": "On-Demand",
+    "usage_quantity": 20000,
+    "unit": "requests",
+    "cost_inr": 2000,
+    "desc": "Content delivery network for static assets"
+  },
+  {
+    "month": "2025-12",
+    "service": "Monitoring",
+    "resource_id": "prometheus-01",
+    "region": "ap-south-1",
+    "usage_type": "On-Demand",
+    "usage_quantity": 100,
+    "unit": "hours",
+    "cost_inr": 1000,
+    "desc": "Monitoring for application and infrastructure"
+  },
+  {
+    "month": "2025-11",
+    "service": "Compute",
+    "resource_id": "worker-01",
+    "region": "ap-south-1",
+    "usage_type": "Reserved",
+    "usage_quantity": 1,
+    "unit": "instance",
+    "cost_inr": 9000,
+    "desc": "Worker node for background tasks (c5.xlarge)"
+  },
+  {
+    "month": "2025-11",
+    "service": "Database",
+    "resource_id": "db-secondary",
+    "region": "ap-south-1",
+    "usage_type": "On-Demand",
+    "usage_quantity": 200,
+    "unit": "GB",
+    "cost_inr": 600,
+    "desc": "Secondary PostgreSQL instance for read replicas"
+  },
+  {
+    "month": "2025-11",
+    "service": "Storage",
+    "resource_id": "logs-store-01",
+    "region": "ap-south-1",
+    "usage_type": "On-Demand",
+    "usage_quantity": 100,
+    "unit": "GB",
+    "cost_inr": 300,
+    "desc": "Log storage for application logs"
+  },
+  {
+    "month": "2025-11",
+    "service": "Networking",
+    "resource_id": "vpn-01",
+    "region": "ap-south-1",
+    "usage_type": "On-Demand",
+    "usage_quantity": 500,
+    "unit": "GB-transfer",
+    "cost_inr": 200,
+    "desc": "VPN for secure communication between data centers"
+  },
+  {
+    "month": "2025-11",
+    "service": "CDN",
+    "resource_id": "cdn-02",
+    "region": "ap-south-1",
+    "usage_type": "Reserved",
+    "usage_quantity": 1,
+    "unit": "instance",
+    "cost_inr": 1500,
+    "desc": "Reserved instance for content delivery network"
+  },
+  {
+    "month": "2025-11",
+    "service": "Monitoring",
+    "resource_id": "newrelic-01",
+    "region": "ap-south-1",
+    "usage_type": "On-Demand",
+    "usage_quantity": 50,
+    "unit": "hours",
+    "cost_inr": 500,
+    "desc": "Application performance monitoring"
+  },
+  {
+    "month": "2025-12",
+    "service": "Compute",
+    "resource_id": "worker-02",
+    "region": "ap-south-1",
+    "usage_type": "Reserved",
+    "usage_quantity": 1,
+    "unit": "instance",
+    "cost_inr": 10500,
+    "desc": "Additional worker node for background tasks (c5.xlarge)"
+  },
+  {
+    "month": "2025-12",
+    "service": "Database",
+    "resource_id": "db-secondary-01",
+    "region": "ap-south-1",
+    "usage_type": "On-Demand",
+    "usage_quantity": 300,
+    "unit": "GB",
+    "cost_inr": 900,
+    "desc": "Additional secondary PostgreSQL instance for read replicas"
+  },
+  {
+    "month": "2025-12",
+    "service": "Storage",
+    "resource_id": "media-store-01",
+    "region": "ap-south-1",
+    "usage_type": "On-Demand",
+    "usage_quantity": 200,
+    "unit": "GB",
+    "cost_inr": 600,
+    "desc": "Media storage for user-generated content"
+  }
+]

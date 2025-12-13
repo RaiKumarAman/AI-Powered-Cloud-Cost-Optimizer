@@ -1,0 +1,207 @@
+{
+  "analysis": {
+    "total_monthly_cost": 49740,
+    "budget": 50000,
+    "budget_variance": -260,
+    "is_over_budget": false,
+    "service_costs": {
+      "Compute": 28140,
+      "Database": 13500,
+      "Storage": 2400,
+      "Networking": 700,
+      "CDN": 3500,
+      "Monitoring": 1500
+    },
+    "high_cost_services": {
+      "Compute": 28140,
+      "Database": 13500,
+      "CDN": 3500,
+      "Storage": 2400,
+      "Monitoring": 1500
+    }
+  },
+  "recommendations": [
+    {
+      "title": "Migrate to AWS Reserved Instances",
+      "service": "Compute",
+      "current_cost": 28140,
+      "potential_savings": 5670,
+      "recommendation_type": "Reserved Instances",
+      "description": "Migrate Compute instances to AWS Reserved Instances to reduce costs by up to 20%.",
+      "implementation_effort": "medium",
+      "risk_level": "low",
+      "steps": [
+        "Identify eligible instances for Reserved Instances",
+        "Purchase Reserved Instances for 1-3 years",
+        "Monitor and adjust Reserved Instances as needed"
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Implement Auto-scaling for Compute",
+      "service": "Compute",
+      "current_cost": 28140,
+      "potential_savings": 1680,
+      "recommendation_type": "Auto-scaling",
+      "description": "Implement Auto-scaling for Compute instances to reduce costs by up to 6% by scaling down during off-peak hours.",
+      "implementation_effort": "high",
+      "risk_level": "medium",
+      "steps": [
+        "Configure Auto-scaling for Compute instances",
+        "Set up scaling policies for off-peak hours",
+        "Monitor and adjust Auto-scaling as needed"
+      ],
+      "cloud_providers": [
+        "AWS",
+        "Azure",
+        "GCP"
+      ]
+    },
+    {
+      "title": "Right-size Database Instances",
+      "service": "Database",
+      "current_cost": 13500,
+      "potential_savings": 3150,
+      "recommendation_type": "Right-sizing",
+      "description": "Right-size Database instances to reduce costs by up to 23% by downgrading instance types.",
+      "implementation_effort": "medium",
+      "risk_level": "low",
+      "steps": [
+        "Identify eligible instances for right-sizing",
+        "Downgrade instance types for Database instances",
+        "Monitor and adjust instance types as needed"
+      ],
+      "cloud_providers": [
+        "AWS",
+        "Azure",
+        "GCP"
+      ]
+    },
+    {
+      "title": "Implement Caching for Database",
+      "service": "Database",
+      "current_cost": 13500,
+      "potential_savings": 1350,
+      "recommendation_type": "Caching",
+      "description": "Implement caching for Database to reduce costs by up to 10% by reducing the load on Database instances.",
+      "implementation_effort": "high",
+      "risk_level": "medium",
+      "steps": [
+        "Configure caching for Database instances",
+        "Set up caching policies for frequently accessed data",
+        "Monitor and adjust caching as needed"
+      ],
+      "cloud_providers": [
+        "AWS",
+        "Azure",
+        "GCP"
+      ]
+    },
+    {
+      "title": "Migrate to Open-source Database",
+      "service": "Database",
+      "current_cost": 13500,
+      "potential_savings": 6750,
+      "recommendation_type": "Multi-cloud & Open-source alternatives",
+      "description": "Migrate Database to an open-source alternative to reduce costs by up to 50%.",
+      "implementation_effort": "high",
+      "risk_level": "high",
+      "steps": [
+        "Identify eligible Database instances for migration",
+        "Migrate Database instances to open-source alternative",
+        "Monitor and adjust migration as needed"
+      ],
+      "cloud_providers": [
+        "Open-source"
+      ]
+    },
+    {
+      "title": "Implement Serverless Compute",
+      "service": "Compute",
+      "current_cost": 28140,
+      "potential_savings": 840,
+      "recommendation_type": "Serverless & Managed services",
+      "description": "Implement Serverless Compute to reduce costs by up to 3% by using managed services.",
+      "implementation_effort": "high",
+      "risk_level": "medium",
+      "steps": [
+        "Configure Serverless Compute for Compute instances",
+        "Set up managed services for Compute instances",
+        "Monitor and adjust Serverless Compute as needed"
+      ],
+      "cloud_providers": [
+        "AWS",
+        "Azure",
+        "GCP"
+      ]
+    },
+    {
+      "title": "Optimize Storage Usage",
+      "service": "Storage",
+      "current_cost": 2400,
+      "potential_savings": 240,
+      "recommendation_type": "Caching & Data optimization",
+      "description": "Optimize Storage usage to reduce costs by up to 10% by reducing storage usage.",
+      "implementation_effort": "medium",
+      "risk_level": "low",
+      "steps": [
+        "Identify eligible storage for optimization",
+        "Optimize storage usage by reducing storage capacity",
+        "Monitor and adjust storage usage as needed"
+      ],
+      "cloud_providers": [
+        "AWS",
+        "Azure",
+        "GCP"
+      ]
+    },
+    {
+      "title": "Implement Monitoring for High-Cost Services",
+      "service": "Monitoring",
+      "current_cost": 1500,
+      "potential_savings": 0,
+      "recommendation_type": "Serverless & Managed services",
+      "description": "Implement Monitoring for High-Cost Services to reduce costs by up to 0% by using managed services.",
+      "implementation_effort": "high",
+      "risk_level": "medium",
+      "steps": [
+        "Configure Monitoring for High-Cost Services",
+        "Set up managed services for High-Cost Services",
+        "Monitor and adjust Monitoring as needed"
+      ],
+      "cloud_providers": [
+        "AWS",
+        "Azure",
+        "GCP"
+      ]
+    },
+    {
+      "title": "Right-size CDN Instances",
+      "service": "CDN",
+      "current_cost": 3500,
+      "potential_savings": 350,
+      "recommendation_type": "Right-sizing",
+      "description": "Right-size CDN instances to reduce costs by up to 10% by downgrading instance types.",
+      "implementation_effort": "medium",
+      "risk_level": "low",
+      "steps": [
+        "Identify eligible instances for right-sizing",
+        "Downgrade instance types for CDN instances",
+        "Monitor and adjust instance types as needed"
+      ],
+      "cloud_providers": [
+        "AWS",
+        "Azure",
+        "GCP"
+      ]
+    }
+  ],
+  "summary": {
+    "total_potential_savings": 18380,
+    "savings_percentage": 36.9,
+    "recommendations_count": 10,
+    "high_impact_recommendations": 4
+  }
+}
