@@ -182,7 +182,7 @@ Setup (first time - 5 minutes):
   python -m venv venv
   .\venv\Scripts\Activate.ps1
   pip install -r requirements.txt
-  copy .env.example .env
+  copy .env
   [Edit .env with HuggingFace API key]
 
 Run application:
@@ -349,3 +349,4 @@ License:       Open Source
 Start with INDEX.md or QUICKSTART.md
 
 ═══════════════════════════════════════════════════════════════════════════
+
