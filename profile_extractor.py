@@ -1,9 +1,3 @@
-"""
-Project Profile Extractor using LLM.
-
-This module extracts structured project information from descriptions using LLM,
-with no rule-based parsing.
-"""
 
 import json
 from typing import Dict, Any
@@ -16,26 +10,11 @@ class ProfileExtractor:
     """Extract project profile from description using LLM."""
     
     def __init__(self, api_key: str = None, model: str = None):
-        """
-        Initialize profile extractor.
         
-        Args:
-            api_key: HuggingFace API key
-            model: Model name
-        """
         self.client = HFInferenceClient(api_key=api_key, model=model)
     
     def extract(self, project_description: str, max_retries: int = 3) -> Dict[str, Any]:
-        """
-        Extract project profile from description.
-        
-        Args:
-            project_description: Project description text
-            max_retries: Number of retries if JSON validation fails
-            
-        Returns:
-            Validated project profile dictionary
-        """
+    
         prompt = self._build_prompt(project_description)
         
         for attempt in range(max_retries):
@@ -78,15 +57,7 @@ class ProfileExtractor:
         raise Exception("Failed to extract profile after max retries")
     
     def _build_prompt(self, project_description: str) -> str:
-        """
-        Build LLM prompt for profile extraction.
         
-        Args:
-            project_description: Project description
-            
-        Returns:
-            Formatted prompt string
-        """
         return f"""Extract project information from the description and return ONLY valid JSON matching this schema:
 {{
   "name": string,
@@ -114,15 +85,7 @@ Rules:
 """
     
     def _parse_response(self, response_text: str) -> Dict[str, Any]:
-        """
-        Parse JSON from response text.
         
-        Args:
-            response_text: Raw response from LLM
-            
-        Returns:
-            Parsed JSON dictionary
-        """
         # Try direct parsing
         try:
             return json.loads(response_text)
@@ -141,3 +104,4 @@ Rules:
                 pass
         
         raise json.JSONDecodeError("Could not extract valid JSON", response_text, 0)
+
