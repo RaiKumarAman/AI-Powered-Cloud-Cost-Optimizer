@@ -1,8 +1,3 @@
-"""
-HuggingFace Inference API Client.
-
-This module handles all communication with HuggingFace Inference API for LLM tasks.
-"""
 
 import json
 import os
@@ -20,13 +15,7 @@ class HFInferenceClient:
     """Client for HuggingFace Inference API."""
     
     def __init__(self, api_key: str = None, model: str = None):
-        """
-        Initialize HuggingFace Inference client.
         
-        Args:
-            api_key: HuggingFace API key (from env if not provided)
-            model: Model name (from env if not provided)
-        """
         # Load from environment if not provided
         api_key = api_key or os.getenv("HUGGINGFACE_API_KEY")
         model = model or os.getenv("HUGGINGFACE_MODEL", "meta-llama/Meta-Llama-3-8B-Instruct")
@@ -42,17 +31,7 @@ class HFInferenceClient:
         self.client = InferenceClient(api_key=api_key)
     
     def query(self, prompt: str, max_retries: int = 3, temperature: float = 0.7) -> str:
-        """
-        Send query to HuggingFace model using conversational API.
         
-        Args:
-            prompt: Input prompt
-            max_retries: Number of retries on failure
-            temperature: Sampling temperature (0.0 to 2.0)
-            
-        Returns:
-            Model response text
-        """
         for attempt in range(max_retries):
             try:
                 # Use conversational API with system and user messages
@@ -114,15 +93,7 @@ class HFInferenceClient:
         raise Exception("Max retries exceeded")
     
     def query_json(self, prompt: str, max_retries: int = 3) -> Dict[str, Any]:
-        """
-        Query and expect JSON response.
-        
-        Args:
-            prompt: Input prompt (should ask for JSON output)
-            max_retries: Number of retries on failure
-            
-        Returns:
-            Parsed JSON response
-        """
+       
         response_text = self.query(prompt, max_retries=max_retries, temperature=0.3)
         return parse_json_response(response_text)
+
