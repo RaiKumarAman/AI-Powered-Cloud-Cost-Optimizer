@@ -516,5 +516,6 @@ The AI-Powered Cloud Cost Optimizer provides intelligent, LLM-driven cloud cost 
 ---
 
 **Version:** 1.0.0  
-**Last Updated:** December 2024
+**Last Updated:** December 2025
+
 
