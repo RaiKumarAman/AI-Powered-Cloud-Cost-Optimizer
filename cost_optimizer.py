@@ -1,9 +1,3 @@
-"""
-AI-Powered Cloud Cost Optimizer - CLI Orchestrator.
-
-Main menu-driven CLI application that orchestrates project profile extraction,
-billing generation, cost analysis, and report generation.
-"""
 
 import json
 import os
@@ -24,7 +18,6 @@ from utils import (
 
 
 class CloudCostOptimizer:
-    """Main Cloud Cost Optimizer application."""
     
     def __init__(self):
         """Initialize the optimizer."""
@@ -262,12 +255,7 @@ class CloudCostOptimizer:
             print(f"... and {len(recommendations) - 5} more recommendations\n")
     
     def _generate_html_report(self) -> str:
-        """
-        Generate HTML report from cost analysis.
-        
-        Returns:
-            HTML string
-        """
+       
         if not self.cost_report:
             return ""
         
@@ -396,3 +384,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
