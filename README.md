@@ -258,7 +258,7 @@ After analysis, you'll get:
 3. **Configure `.env`:**
    ```env
    HUGGINGFACE_API_KEY=hf_xxxxxxxxxxxxxxxxxxxxxx
-   HUGGINGFACE_MODEL=meta-llama/Llama-2-7b-chat-hf
+   HUGGINGFACE_MODEL=meta-llama/Meta-Llama-3-8B-Instruct
    BUDGET_THRESHOLD=5000
    ```
 
@@ -275,7 +275,7 @@ The application supports any HuggingFace hosted model. Recommended:
   - `meta-llama/Llama-2-70b-chat-hf`
 
 - **Default (balanced):**
-  - `meta-llama/Llama-2-7b-chat-hf`
+  - `meta-llama/Meta-Llama-3-8B-Instruct`
 
 ## Architecture
 
@@ -517,6 +517,7 @@ The AI-Powered Cloud Cost Optimizer provides intelligent, LLM-driven cloud cost 
 
 **Version:** 1.0.0  
 **Last Updated:** December 2025
+
 
 
 
