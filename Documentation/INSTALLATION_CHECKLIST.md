@@ -84,7 +84,7 @@ Create .env file with your HuggingFace API key:
    
 3. Edit .env:
    HUGGINGFACE_API_KEY=hf_xxxxxxxxxxxxxxxxxxxxx
-   HUGGINGFACE_MODEL=meta-llama/Llama-2-7b-chat-hf
+   HUGGINGFACE_MODEL=meta-llama/Meta-Llama-3-8B-Instruct
    BUDGET_THRESHOLD=5000
 
 4. Verify:
@@ -262,6 +262,7 @@ Support Resources:
 
 ---
 
-Checklist Date: December 2024
+Checklist Date: December 2025
 Status: Ready for Production Use
-Contact Support: [Your Contact Info]
+Contact Support: rai.aman1909@gmail.com
+
