@@ -99,8 +99,8 @@ requirements.txt
   - python-dotenv>=1.0.0
   - requests>=2.31.0
   
-.env.example
-  Example environment configuration
+.env
+  environment configuration
   - HUGGINGFACE_API_KEY template
   - Model selection
   - Budget threshold
@@ -146,20 +146,6 @@ INSTALLATION_CHECKLIST.md
 INDEX.md
   This file - Navigation guide
 
-SAMPLE DATA:
-────────────
-sample_outputs/project_description.txt
-  Example: E-commerce platform description
-  
-sample_outputs/project_profile.json
-  Example: Extracted project profile
-  
-sample_outputs/mock_billing.json
-  Example: 18 generated billing records
-  
-sample_outputs/cost_optimization_report.json
-  Example: Complete analysis with 10 recommendations
-
 ═══════════════════════════════════════════════════
 
 QUICK START COMMANDS
@@ -169,7 +155,7 @@ Setup (First Time):
   python -m venv venv
   .\venv\Scripts\Activate.ps1
   pip install -r requirements.txt
-  copy .env.example .env
+  copy .env
   [Edit .env with HuggingFace API key]
 
 Run Application:
@@ -281,29 +267,6 @@ Varies based on:
 
 ═══════════════════════════════════════════════════
 
-OUTPUT EXAMPLE
-══════════════
-
-Input Project:
-  E-commerce Platform
-  AWS infrastructure
-  Current: $8,904.75/month
-  Budget: $5,000/month
-
-Analysis Results:
-  Total Cost: $8,904.75
-  Budget Variance: +$3,904.75 (OVER)
-  High-Cost Service: EC2 ($4,101.25)
-  
-Top 3 Recommendations:
-  1. Reserved Instances: Save $1,640/month (Easy)
-  2. Auto-Scaling: Save $820/month (Medium)
-  3. S3 Lifecycle: Save $375/month (Easy)
-
-Total Potential Savings: $6,055/month
-
-═══════════════════════════════════════════════════
-
 REQUIREMENTS
 ════════════
 
@@ -352,36 +315,6 @@ Issue: "Request timeout"
 
 → See INSTALLATION_CHECKLIST.md for detailed help
 → See README.md troubleshooting section
-
-═══════════════════════════════════════════════════
-
-SAMPLE DATA PREVIEW
-═══════════════════
-
-View sample outputs in: sample_outputs/
-
-File: project_profile.json
-{
-  "project_name": "E-Commerce Platform",
-  "services": ["EC2", "RDS", "S3", "CloudFront"],
-  "estimated_monthly_cost": 8500,
-  "cloud_platforms": ["AWS"]
-}
-
-File: mock_billing.json
-Contains 18 billing records like:
-{
-  "service": "EC2",
-  "cost": 2850.75,
-  "date": "2024-12-01",
-  "region": "us-east-1"
-}
-
-File: cost_optimization_report.json
-{
-  "total_potential_savings": 6055,
-  "recommendations": [10 recommendations with details]
-}
 
 ═══════════════════════════════════════════════════
 
