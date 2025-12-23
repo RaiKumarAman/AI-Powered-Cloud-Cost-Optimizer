@@ -27,7 +27,7 @@ cloud_optimizer/
 ├── utils.py                    # Utility functions (file I/O, formatting, etc.)
 ├── validators.py               # JSON validation and structure validation
 ├── requirements.txt            # Python dependencies
-├── .env.example               # Example environment configuration
+├── .env                        # Example environment configuration
 ├── README.md                   # This file
 └── sample_outputs/            # Sample JSON and report files
     ├── project_description.txt # Sample project description
@@ -517,6 +517,7 @@ The AI-Powered Cloud Cost Optimizer provides intelligent, LLM-driven cloud cost 
 
 **Version:** 1.0.0  
 **Last Updated:** December 2025
+
 
 
 
