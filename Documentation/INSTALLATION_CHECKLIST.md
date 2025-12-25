@@ -96,8 +96,8 @@ Create .env file with your HuggingFace API key:
    Copy .env.example to .env
    
 3. Edit .env:
-   HUGGINGFACE_API_KEY=hf_xxxxxxxxxxxxxxxxxxxxx
-   HUGGINGFACE_MODEL=meta-llama/Meta-Llama-3-8B-Instruct
+   HUGGINGFACE_API_KEY=hf_xxxxxxxxxxxxxxxxxxxxx, 
+   HUGGINGFACE_MODEL=meta-llama/Meta-Llama-3-8B-Instruct, 
    BUDGET_THRESHOLD=5000
 
 4. Verify:
@@ -278,5 +278,6 @@ Support Resources:
 Checklist Date: December 2025
 Status: Ready for Production Use
 Contact Support: rai.aman1909@gmail.com
+
 
 
