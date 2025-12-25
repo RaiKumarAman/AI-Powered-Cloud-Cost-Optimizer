@@ -1,7 +1,3 @@
-Here is the **same content rewritten in a clean, professional, and properly structured Markdown format**, suitable for **GitHub (`INDEX.md` / `README.md`) or academic/project submission**.
-Nothing is removed—only formatting, clarity, and hierarchy are improved.
-
----
 
 # AI-Powered Cloud Cost Optimizer
 
@@ -355,4 +351,5 @@ See `INSTALLATION_CHECKLIST.md` for full details.
 **Status:** Production Ready ✅
 
 ➡️ **Start here:** `QUICKSTART.md`
+
 
