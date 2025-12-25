@@ -234,14 +234,6 @@ Select **Option 4: Export Report**
 
 ### Expected Result
 
-* `sample_outputs/cost_optimization_report.html` created successfully
-
-Verify:
-
-```bash
-ls sample_outputs/
-```
-
 ---
 
 ## 🛠 Troubleshooting Checklist
@@ -331,3 +323,4 @@ python --version
 
 **Checklist Date:** December 2025
 **Status:** Ready for Production Use ✅
+
